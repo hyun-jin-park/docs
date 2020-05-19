@@ -1,0 +1,46 @@
+/*
+
+Add styles or override variables from the theme here.
+
+*/
+
+h3, h4 {
+    max-width: 80%;
+    margin-top: 3em !important;
+}
+
+.navbar-brand {
+    font-size: 1.6rem !important;
+}
+
+.td-content > figure {
+    max-width: 80%;
+}
+figure img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+.gist {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+table {
+    display: table !important;
+    width: 80% !important;
+}
+pre {
+    margin-bottom: 2em !important;
+}
+ol + pre,
+ol + pre + p,
+ol + pre + p + pre {
+    
+    margin-left: 40px;
+}
+
+.td-sidebar-nav__section {
+    margin-bottom: 20px !important;
+}
+
