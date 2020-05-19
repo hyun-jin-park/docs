@@ -1,30 +1,46 @@
-name: github pages
+# This is a basic workflow to help you get started with Actions
 
+name: CI for Hugo
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.68.3'
-          # extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    
+    - name: Checkout submodules
+      shell: bash
+      run: |
+        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+        git submodule sync --recursive
+        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+    
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+        
+    - name: Build Hugo Site
+      run: |
+        hugo --minify
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./public
