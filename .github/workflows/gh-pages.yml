@@ -16,7 +16,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -28,6 +28,13 @@ jobs:
         auth_header="$(git config --local --get http.https://github.com/.extraheader)"
         git submodule sync --recursive
         git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+    
+    - name: npm install
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - run: npm install
     
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
