@@ -3,7 +3,7 @@ title: "1. Jenkins"
 date: 2020-05-15
 weight: 4
 description: >
-#   A short lead descripton about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
+#   Automating Android and iOS app testing with a jenkins pipeline
 ---
 
 ## apptest.ai Integration for Jenkins
