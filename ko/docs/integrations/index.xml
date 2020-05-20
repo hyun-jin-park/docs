@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>apptest.ai – CI/CD Integration Document</title><link>/ko/docs/integrations/</link><description>Recent content in CI/CD Integration Document on apptest.ai</description><generator>Hugo -- gohugo.io</generator><atom:link href="/ko/docs/integrations/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 1. Jenkins</title><link>/ko/docs/integrations/1_jenkins/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/docs/integrations/1_jenkins/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>apptest.ai – CI/CD Integration Document</title><link>/apptestai/ko/docs/integrations/</link><description>Recent content in CI/CD Integration Document on apptest.ai</description><generator>Hugo -- gohugo.io</generator><atom:link href="/apptestai/ko/docs/integrations/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 1. Jenkins</title><link>/apptestai/ko/docs/integrations/1_jenkins/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptestai/ko/docs/integrations/1_jenkins/</guid><description>
 &lt;h2 id="apptestai-integration-for-jenkins">apptest.ai Integration for Jenkins&lt;/h2>
 &lt;h5 id="automating-android-and-ios-app-testing-with-a-jenkins-pipeline">Automating Android and iOS app testing with a jenkins pipeline&lt;/h5>
 &lt;p>This document explains how to configure Jenkins and use our APIs to automatically run apptest.ai tests from the build phase.&lt;/p>
@@ -115,20 +115,20 @@
 &lt;li>
 &lt;p>How to find the access key: An access key is automatically issued when you sign up with apptest.ai. You can locate it in the apptest.ai profile page
 &lt;figure>
-&lt;img src="/images/1_jenkins_1.png"/>
+&lt;img src="/apptestai/images/1_jenkins_1.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_2.png"/>
+&lt;img src="/apptestai/images/1_jenkins_2.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>How to find the project ID: A project ID is assigned when you create a testing project
 &lt;figure>
-&lt;img src="/images/1_jenkins_3.png"/>
+&lt;img src="/apptestai/images/1_jenkins_3.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_4.png"/>
+&lt;img src="/apptestai/images/1_jenkins_4.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
@@ -145,17 +145,17 @@
 &lt;li>
 &lt;p>Go to the setup page and click on the Configure page.
 &lt;figure>
-&lt;img src="/images/1_jenkins_5.png"/>
+&lt;img src="/apptestai/images/1_jenkins_5.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_6.png"/>
+&lt;img src="/apptestai/images/1_jenkins_6.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>On the pipeline definition page, add the apptest.ai Test Stage Code to the Script box
 &lt;figure>
-&lt;img src="/images/1_jenkins_7.png"/>
+&lt;img src="/apptestai/images/1_jenkins_7.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
@@ -329,7 +329,7 @@ junit 'tmp/TESTS-*.xml'
 &lt;/ul>
 &lt;p>Click “Build Now” in Jenkins to start the pipeline.
 &lt;figure>
-&lt;img src="/images/1_jenkins_8.png"/>
+&lt;img src="/apptestai/images/1_jenkins_8.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;h3 id="5-test-results">5. Test Results&lt;/h3>
@@ -339,42 +339,42 @@ junit 'tmp/TESTS-*.xml'
 &lt;li>
 &lt;p>View Testing Results in Jenkins
 &lt;figure>
-&lt;img src="/images/1_jenkins_9.png"/>
+&lt;img src="/apptestai/images/1_jenkins_9.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_10.png"/>
+&lt;img src="/apptestai/images/1_jenkins_10.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_11.png"/>
+&lt;img src="/apptestai/images/1_jenkins_11.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_12.png"/>
+&lt;img src="/apptestai/images/1_jenkins_12.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_13.png"/>
+&lt;img src="/apptestai/images/1_jenkins_13.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_14.png"/>
+&lt;img src="/apptestai/images/1_jenkins_14.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>View Testing Results in apptest.ai
 &lt;figure>
-&lt;img src="/images/1_jenkins_15.png"/>
+&lt;img src="/apptestai/images/1_jenkins_15.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_16.png"/>
+&lt;img src="/apptestai/images/1_jenkins_16.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_17.png"/>
+&lt;img src="/apptestai/images/1_jenkins_17.png"/>
 &lt;/figure>
 &lt;figure>
-&lt;img src="/images/1_jenkins_18.png"/>
+&lt;img src="/apptestai/images/1_jenkins_18.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs: 2. Travis CI</title><link>/ko/docs/integrations/2_travisci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/docs/integrations/2_travisci/</guid><description>
+&lt;/ul></description></item><item><title>Docs: 2. Travis CI</title><link>/apptestai/ko/docs/integrations/2_travisci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptestai/ko/docs/integrations/2_travisci/</guid><description>
 &lt;h2 id="apptestai-integration-for-travis-ci">apptest.ai Integration for Travis CI&lt;/h2>
 &lt;p>With just a few lines of script, you can enable apptest.ai along with Travis CI for out testbot to explore your apps and report results for every build process.&lt;/p>
 &lt;p>To use the apptest.ai service within Travis CI pipeline, you can take the following two steps: 1. Register the apptest.ai Access Key, and 2. add the apptest.ai to your build script (travis.yml)&lt;/p>
@@ -383,7 +383,7 @@ junit 'tmp/TESTS-*.xml'
 &lt;li>
 &lt;p>Copy the access key string from the apptest.ai service profile page
 &lt;figure>
-&lt;img src="/images/2_travisci_1.gif"/>
+&lt;img src="/apptestai/images/2_travisci_1.gif"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
@@ -412,21 +412,21 @@ global:
 &lt;p>At least two arguments, binary_path and project_id, are required to invoke the service. binary_path is the path to the binary you want to test, i.e. * .apk files for android and * .ipa files for iOS. project_id is the Project ID for apptest.ai that contains the settings such as test time and device list for testing. The Project ID of apptest.ai can be found on the project information page as shown below.&lt;/p>
 &lt;/blockquote>
 &lt;figure>
-&lt;img src="/images/2_travisci_2.png"/>
+&lt;img src="/apptestai/images/2_travisci_2.png"/>
 &lt;/figure>
 &lt;p>If you don’t want to download apptest.ai’s CI integration script every time, include apptest.ai’s ci_addon repository in the Project Repository in advance.&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>Once you commit the build script, Travis CI will execute. When running apptest.ai script, the test is executed as shown below and the result is printed on the console.
 &lt;figure>
-&lt;img src="/images/2_travisci_3.png"/>
+&lt;img src="/apptestai/images/2_travisci_3.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>The test results are stored in test-results/apptest-ai_result.html with detailed HTML report and an XML document in JUnit Test result format in test-results /apptestai/result.xml. You can save this file externally using various deploy functions provided by Travis CI. Below is an example of a release on Github. You can see the apptest.ai test report posted on Github’s release page.
 &lt;figure>
-&lt;img src="/images/2_travisci_4.gif"/>
+&lt;img src="/apptestai/images/2_travisci_4.gif"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
@@ -437,7 +437,7 @@ global:
 &lt;p>Finally, here’s the .travis.yml example. First, for Android, in the “env” section, you can see that there are two secure environment variables for storing apptest.ai access key and two secure environment variables for Github acess key to deploy.&lt;/p>
 &lt;script type="application/javascript" src="https://gist.github.com/genie-park/afb71bfb6981edbc109eb5b8511007de.js">&lt;/script>
 &lt;p>For an iOS case, iOS needs two more registered environment variables. This is an environment variable for code sign which is required when creating binary on iOS. Below we used a Fastlane match for the code sign. Fastlane match encrypts the certificate file and provisioning file required for code signing on Github, so two more access tokens and decryption keys are added to access a private GitHub repository where the certificate is stored compared to Android.&lt;/p>
-&lt;script type="application/javascript" src="https://gist.github.com/genie-park/8c3756623d48b472e177bc473c5c9338.js">&lt;/script></description></item><item><title>Docs: 3. Circle CI</title><link>/ko/docs/integrations/3_circleci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/docs/integrations/3_circleci/</guid><description>
+&lt;script type="application/javascript" src="https://gist.github.com/genie-park/8c3756623d48b472e177bc473c5c9338.js">&lt;/script></description></item><item><title>Docs: 3. Circle CI</title><link>/apptestai/ko/docs/integrations/3_circleci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptestai/ko/docs/integrations/3_circleci/</guid><description>
 &lt;h2 id="apptestai-integration-for-circle-ci">apptest.ai Integration for Circle CI&lt;/h2>
 &lt;p>Starting with CircleCI version 2.1, the build script sharing method called orb allows you to have Testbot test your app and report the results in every build with just a few lines of scripts.&lt;/p>
 &lt;p>To enable the apptest.ai service during a build in CircleCI: 1. Register the apptest.ai access key in the build environment variable.&lt;/p>
@@ -446,21 +446,21 @@ global:
 &lt;li>
 &lt;p>Copy the access key string from the apptest.ai service profile page
 &lt;figure>
-&lt;img src="/images/3_circleci_1.gif"/>
+&lt;img src="/apptestai/images/3_circleci_1.gif"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Connect to CircleCI and click the Setting icon to the right of the build project name to go to the build configuration page.
 &lt;figure>
-&lt;img src="/images/3_circleci_2.png"/>
+&lt;img src="/apptestai/images/3_circleci_2.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>From the Setup page, select Environment variables menu and click Add Variables button to create the variable APPTEST_AI_ACCESS_KEY.
 &lt;figure>
-&lt;img src="/images/3_circleci_3.png"/>
+&lt;img src="/apptestai/images/3_circleci_3.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
@@ -489,14 +489,14 @@ project_id: '818'
 &lt;p>At least two arguments, binary_path and project_id, are required to invoke the service. binary_path is the path to the binary you want to test: * .apk files for android and * .ipa files for iOS. project_id is the ID for apptest.ai that contains the settings such as test time and device list for testing. The Project ID of apptest.ai can be found on the Project Information page as shown below.&lt;/p>
 &lt;/blockquote>
 &lt;figure>
-&lt;img src="/images/3_circleci_4.png"/>
+&lt;img src="/apptestai/images/3_circleci_4.png"/>
 &lt;/figure>
 &lt;ol start="3">
 &lt;li>Execute the build&lt;/li>
 &lt;/ol>
 &lt;p>The apptest-ai/run-test step sends a request to test with apptest.ai and after the test is complete, prints the test result to the console as shown below.
 &lt;figure>
-&lt;img src="/images/3_circleci_5.png"/>
+&lt;img src="/apptestai/images/3_circleci_5.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;blockquote>
@@ -514,7 +514,7 @@ waiting_for_test_results: 'false'
 path: test-results
 &lt;/code>&lt;/pre>&lt;p>If you add the store-test result step, CircleCI analyzes the test result of apptest.ai along with other test results in the Test Summary tab as below.
 &lt;figure>
-&lt;img src="/images/3_circleci_6.png"/>
+&lt;img src="/apptestai/images/3_circleci_6.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;ol start="5">
@@ -525,12 +525,12 @@ path: test-results
 path: test-results
 &lt;/code>&lt;/pre>&lt;p>Saved test report is inquired as below in Artifacts tab in CircleCI.
 &lt;figure>
-&lt;img src="/images/3_circleci_7.png"/>
+&lt;img src="/apptestai/images/3_circleci_7.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>If you click this html file, you can see the detailed report as below.
 &lt;figure>
-&lt;img src="/images/3_circleci_8.png"/>
+&lt;img src="/apptestai/images/3_circleci_8.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;blockquote>
@@ -543,7 +543,7 @@ test_result_path: app/build/outputs/apk/debug
 &lt;/code>&lt;/pre>&lt;p>Finally, here’s the sample the final .circleci / config.yml file. Below is for Android.&lt;/p>
 &lt;script type="application/javascript" src="https://gist.github.com/genie-park/cc0804ab72097afffc718defe69b83e9.js">&lt;/script>
 &lt;p>And iOS:&lt;/p>
-&lt;script type="application/javascript" src="https://gist.github.com/genie-park/078f9d25e81f75a2d61435c3684367f9.js">&lt;/script></description></item><item><title>Docs: 4. Circle CI with Saucelabs</title><link>/ko/docs/integrations/4_circleciwithsaucelabs/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/docs/integrations/4_circleciwithsaucelabs/</guid><description>
+&lt;script type="application/javascript" src="https://gist.github.com/genie-park/078f9d25e81f75a2d61435c3684367f9.js">&lt;/script></description></item><item><title>Docs: 4. Circle CI with Saucelabs</title><link>/apptestai/ko/docs/integrations/4_circleciwithsaucelabs/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptestai/ko/docs/integrations/4_circleciwithsaucelabs/</guid><description>
 &lt;h2 id="using-apptestai-with-circle-ci-on-saucelabs">Using apptest.ai with Circle CI on SauceLabs&lt;/h2>
 &lt;p>We have a tutorial on how to use the apptest.ai service on CircleCI to perform a daily build which is running a smoke test without writing a single line of code. This time, I will introduce how to test the same using a device provided by Sauce Labs, not a device provided by apptest.ai.&lt;/p>
 &lt;p>The only change from the way the CircleCI used the appTest.ai service is to use Sauce Labs API Keys instead of apptest.ai’s access keys, and to associate the apptest.ai and Sauce Labs accounts. If you are interested in linking your apptest.ai and Sauce Labs accounts during the current Beta period, please send an email to &lt;a href="mailto:contact@apptest.ai">contact@apptest.ai&lt;/a>&lt;/p>
@@ -551,14 +551,14 @@ test_result_path: app/build/outputs/apk/debug
 &lt;li>
 &lt;p>Access to Sauce Labs service as below and obtain your API key
 &lt;figure>
-&lt;img src="/images/4_saucelabs_1.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_1.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Register the APPTEST_AI_ACCESS_KEY in CircleCI using Sauce Labs API the same way that your previously registered the apptest.ai access key in CircleCI
 &lt;figure>
-&lt;img src="/images/4_saucelabs_2.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_2.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
@@ -574,38 +574,38 @@ binary_path: app/build/outputs/apk/debug/app-debug.apk
 &lt;/code>&lt;/pre>&lt;ol start="4">
 &lt;li>When you build, you can test with the device registered in your Sauce Labs account as below, and the result is saved in the Artifacts tab in CircleCI. More detailed test data including device log can be accessed by accessing Sauce Labs.
 &lt;figure>
-&lt;img src="/images/4_saucelabs_3.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_3.png"/>
 &lt;/figure>
 &lt;/li>
 &lt;/ol>
 &lt;p>Test on LG G5 provided by Sauce Labs has been successfully completed
 &lt;figure>
-&lt;img src="/images/4_saucelabs_4.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_4.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>The test summary of CircleCI also demonstrates the result the testbot
 &lt;figure>
-&lt;img src="/images/4_saucelabs_5.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_5.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>You can find the test report saved in HTML from in CircleCI Artifacts.
 &lt;figure>
-&lt;img src="/images/4_saucelabs_6.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_6.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>You can open this HTML to see the detailed test results
 &lt;figure>
-&lt;img src="/images/4_saucelabs_7.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_7.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>Connect to Sauce Labs to see the details of the LG G5 report used in the test
 &lt;figure>
-&lt;img src="/images/4_saucelabs_8.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_8.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>Sauce Labs can view the screen shots collected during the tests requested by CircleCI
 &lt;figure>
-&lt;img src="/images/4_saucelabs_9.png"/>
+&lt;img src="/apptestai/images/4_saucelabs_9.png"/>
 &lt;/figure>
 &lt;/p>
 &lt;p>In Sauce Labs, you can search the detailed device log collected during the test on the CircleCI&lt;/p>
