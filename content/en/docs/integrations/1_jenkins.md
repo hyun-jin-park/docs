@@ -3,7 +3,7 @@ title: "1. Jenkins"
 date: 2020-05-15
 weight: 4
 description: >
-   Automating Android and iOS app testing with a jenkins pipeline
+#   Automating Android and iOS app testing with a jenkins pipeline
 ---
 
 ## apptest.ai Integration for Jenkins
