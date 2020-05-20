@@ -97,7 +97,7 @@ version = "1.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://apptestai.github.io"
+url_latest_version = "https://apptestai.github.io/docs"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/apptestai/apptest_client_docs"
@@ -111,10 +111,10 @@ github_repo = "https://github.com/apptestai/apptest_client_docs"
 gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
 # Enable Algolia DocSearch
-algolia_docsearch = false
+algolia_docsearch = true
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
 
 # User interface configuration
 [params.ui]
