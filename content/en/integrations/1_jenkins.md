@@ -1,6 +1,7 @@
 ---
 title: "1. Jenkins"
 date: 2020-05-15
+type: docs
 weight: 4
 description: >
 #   Automating Android and iOS app testing with a jenkins pipeline

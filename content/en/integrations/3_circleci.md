@@ -1,6 +1,7 @@
 ---
 title: "3. Circle CI"
 date: 2020-05-15
+type: docs
 weight: 4
 description: >
 #   A short lead descripton about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
