@@ -3,5 +3,5 @@ title: "CI/CD Integration Document"
 linkTitle: "Integrations"
 weight: 4
 description: >
-  Find out how to Integrate with CI/CD Tools.
+  CI / CD 도구와 통합하는 방법을 제공합니다.
 ---

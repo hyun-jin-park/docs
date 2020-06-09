@@ -20,7 +20,7 @@ Some Options of the new test run follow the configuration information stored in 
 ```
 POST /openapi/v2/testset
 
-Host : HTTPS://api.apptest.ai
+Host : https://api.apptest.ai
 
 Authorization : Basic {user_id}:{access_key}
 ```
@@ -29,19 +29,19 @@ Request Body Miltipary Form Data #1
 
 | key       | type  | Description               | Required  |
 |:--        |:--    |:--                        |:--        |
-| app_file  | File  | Target APP File to Test   |  Reqiored  
+| app_file  | File  | Target APP File to Test   |  Required  
 
 Request Body Miltipary Form Data #2
 
 | key           |           | type              |                       | Description    | Required |
 |:--            |:--        |:--                |:--                    |:--             |:--|
-| pid           |           | Positive Number   | -                     | Project ID <br/> ex) 509   | Required |
+| pid           |           | Positive Number   | -                     | Unique number of Project <br/> ex) 509   | Required |
 | testset_name  |           | String            | Max 100 Characters    | Name of testset <br/> ex) "Testset name Example#1" | Required |
 | time_limmit   |           | Positive Number   | Min : 5 <br/>Max : 30 | Test time limit (Minutes) <br/>ex) 5 <br/>If the value is empty, it follows the time-limit saved in the project settings.     | Required |
 | use_vo        |           | Boolean           | Default: false        | Whether AT&T Video Optimizer(ARO) is used (`true` or `false` ) <br/>ex) true  | Required |
 | callback      |           | String            | Max 250 Characters    | Callback URL to be called after test completion. <br/>ex) 'https://127.0.0.1/callback/url/example'  | Required |
-| credentials   | login_id  | String            | Max 150 Characters    | ID of the test account required to test the app. <br/>(Test credentials info - Login ID) <br/>ex) 'credentials_id'            | Required |
-|               | login_pw  | String            | Max 150 Characters    | Password of the test account required to test the app. <br/>(Test credentials info - Login PW) <br/>ex) 'credentials_pw'      | Required 
+| credentials   | login_id  | String            | Max 150 Characters    | Account information(ID) of the test target app to be used to test the app <br/>(Test credentials info - Login ID) <br/>ex) 'credentials_id'            | Required |
+|               | login_pw  | String            | Max 150 Characters    | Account information(Password) of the test target app to be used to test the app <br/>(Test credentials info - Login PW) <br/>ex) 'credentials_pw'      | Required 
 
 [ Request Example ]
 ```
@@ -62,15 +62,11 @@ curl    --request POST \
 
 [ Response ]
 
-| key           |           | type              |                       | Description                                                                                                                   | Required |
-|:--            |:--        |:--                |:--                    |:--                                                                                                                            |:--|
-| pid           |           | Positive Number   | -                     | Project ID <br/> ex) 509                                                                                                      | Required |
-| testset_name  |           | String            | Max 100 Characters    | Name of testset <br/> ex) "Testset name Example#1"                                                                            | Required |
-| time_limmit   |           | Positive Number   | Min : 5 <br/>Max : 30 | Test time limit (Minutes) <br/>ex) 5 <br/>If the value is empty, it follows the time-limit saved in the project settings.     | Required |
-| use_vo        |           | Boolean           | Default: false        | Whether AT&T Video Optimizer(ARO) is used (`true` or `false` ) <br/>ex) true                                                  | Required |
-| callback      |           | String            | Max 250 Characters    | Callback URL to be called after test completion. <br/>ex) 'https://127.0.0.1/callback/url/example'                            | Required |
-| credentials   | login_id  | String            | Max 150 Characters    | ID of the test account required to test the app. <br/>(Test credentials info - Login ID) <br/>ex) 'credentials_id'            | Required |
-|               | login_pw  | String            | Max 150 Characters    | Password of the test account required to test the app. <br/>(Test credentials info - Login PW) <br/>ex) 'credentials_pw'      | Required 
+
+| key           |           | type              | Description                                               |
+|:--            |:--        |:--                |:--                                                        |
+| test_count    |           | Positive Number   | Number of Unit tests run on the Testset  <br/> ex) 3      |
+| testset_id    |           | Positive Number   | Unique number of the Testset <br/> ex) 251929             
 
 
 [ Response Example ]
@@ -125,14 +121,14 @@ Authorization : Basic {user_id}:{access_key}
 
 Request URL Parameter
 
-| Key           | Type              | Description   | Required  |
-|:--            |:--                |:--            |:--        |
-| testset_id    | Positive number   | Testset ID    | Required  
+| Key           | Type              | Description               | Required  |
+|:--            |:--                |:--                        |:--        |
+| testset_id    | Positive number   | Unique number of Testset  | Required  
 
 [ Request Example ]
 
 ```
-curl --request POST \
+curl --request GET \
      --user {user_id}:{access_key} \
      https://api.apptest.ai/openapi/v2/testset/55716
 ```
@@ -152,7 +148,7 @@ Response Body Data Type : JSON
 |                       | pass_cnt          | Positive number	| passed test counts                        |
 |                       | running_cnt	    | Positive number	| Running test counts                       |
 |                       | stop_cnt	        | Positive number	| stopped test counts                       |
-|                       | response_time	    | Datetime	        | Response time (timezome : UTC)
+| response_time	        |                   | Datetime	        | Response time (timezome : UTC)
 
 
 [Response Example ]
@@ -169,7 +165,8 @@ Response Body Data Type : JSON
             'running_cnt': 1,
             'stop_cnt': 0,
             'pass_cnt': 0
-        }
+        },
+        'response_time': 'Mon, 25 May 2020 06:40:24 GMT'
     },
     "result_code": 0,
     "result_msg": "", 
@@ -179,19 +176,10 @@ Response Body Data Type : JSON
 
 [ Error Code ]
 
-result_code	result_msg	reason
-5002	Get Testset Status Error	Global Exception Error – {ERROR_MSG}
-8000	System Maintenance	The Service is currently under system maintenance.
-HTTP STATUS CODE	
-400	Bad Request
-401	Unauthorized
-200	OK
-
-
-
-
-
-
+| result_code   | result_msg                | reason    |
+|:--            |:--                        |:--        |
+| 5002          | Get Testset Status Error  | Global Exception Error – {ERROR_MSG} |
+| 8000          | System Maintenance        | The Service is currently under system maintenance. 
 
 
 
@@ -211,14 +199,15 @@ Authorization : Basic {user_id}:{access_key}
 
 Request URL Parameter
 
-Key	Type	Description	Required
-testset_id	Positive number	Testset ID	Required
+| Key           | Type              | Description               | Required  | 
+|:--            |:--                |:--                        |:--        |
+| testset_id    | Positive number   | Unique number of Testset  | Required
 
 
 [ Request Example ]
 
 ```
-curl --request POST \
+curl --request GET \
      --user {user_id}:{access_key} \
      https://api.apptest.ai/openapi/v2/testset/55716/result
 ```
@@ -253,7 +242,7 @@ Response Body Data Type : JSON
 
 [ JUnit XML Format ]
 
-| Key	Type	Description
+| Key	        | Type      | Description                                               |
 |:--            |:--        |:--                                                        |
 | complete      | Boolean   | Whether the test is running or completed (true | false)   |
 | result_xml    | String    | Result data in XML format in JUnit format                 |
@@ -286,11 +275,6 @@ Response Body Data Type : JSON
 | 6003	        | Data Does Not Exist	        | Test data does not exist.                                     |
 | 8000	        | System Maintenance	        | The Service is currently under system maintenance.
 
-| HTTP | STATUS CODE |
-|:--   |:--          |
-| 400  | Bad Request |
-| 401  | Unauthorized|
-| 200  | OK
 
 
 ### Appendix. API Result Codes
@@ -317,5 +301,3 @@ Response Body Data Type : JSON
 | 6002	| Get Testset Result Data Failed| Test is running yet. Please request when the test is complete. |
 | 6003	| Data Does Not Exist	        | Test data does not exist. |
 | 8000	| System Maintenance	        | The Service is currently under system maintenance.
-
-
