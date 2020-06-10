@@ -1,6 +1,6 @@
 ---
 title: "Rest APIs for CI/CD"
-linkTitle: "restapi"
+linkTitle: "Rest APIs"
 type: docs
 weight: 4
 description: >
