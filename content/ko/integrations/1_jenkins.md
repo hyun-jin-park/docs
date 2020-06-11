@@ -89,12 +89,12 @@ Response
 apptest.ai를 Jenkins 파이프 라인에 통합하려면 액세스 키와 프로젝트의 고유번호(Project ID)가 필요합니다. 
 
 - 액세스 키를 찾는 방법 : apptest.ai에 가입하면 액세스 키가 자동으로 발급됩니다. apptest.ai Profile 페이지에서 확인하실 수 있습니다.
-    {{< figure src="/images/1_jenkins_1.png" >}}
-    {{< figure src="/images/1_jenkins_2.png" >}}
+    {{< figure src="../../images/1_jenkins_1.png" >}}
+    {{< figure src="../../images/1_jenkins_2.png" >}}
 
 - 프로젝트 ID를 찾는 방법 : 테스트 프로젝트를 만들 때 프로젝트 ID가 할당됩니다.
-    {{< figure src="/images/1_jenkins_3.png" >}}
-    {{< figure src="/images/1_jenkins_4.png" >}}
+    {{< figure src="../../images/1_jenkins_3.png" >}}
+    {{< figure src="../../images/1_jenkins_4.png" >}}
 
     회원가입시 기본적으로 샘플 테스트 프로젝트가 1개 생성됩니다.
 
@@ -118,11 +118,11 @@ Jenkins 대시 보드에서 "Webhook step" 플러그인을 검색하여 설치�
 
 
 - 메인 페이지에서 좌측메뉴의 Configure 버튼을 클릭하십시오.
-    {{< figure src="/images/1_jenkins_5.png" >}}
-    {{< figure src="/images/1_jenkins_6.png" >}}
+    {{< figure src="../../images/1_jenkins_5.png" >}}
+    {{< figure src="../../images/1_jenkins_6.png" >}}
 
 - 파이프 라인 설정 페이지에서 apptest.ai Tes Stage Code를 스크립트 입력란에 추가하십시오.
-    {{< figure src="/images/1_jenkins_7.png" >}}
+    {{< figure src="../../images/1_jenkins_7.png" >}}
 
     ##### [apptest.ai Test Stage Code 1] – Webhook
     ```
@@ -323,7 +323,7 @@ Jenkins 대시 보드에서 "Webhook step" 플러그인을 검색하여 설치�
     - apkFile: 테스트 할 대상 앱파일(App Binary File)
 
     파이프 라인을 시작하려면 Jenkins에서 "Build Now"를 클릭하십시오.
-    {{< figure src="/images/1_jenkins_8.png" >}}
+    {{< figure src="../../images/1_jenkins_8.png" >}}
 
 ### 5. Test Results
 테스트가 완료되면 JUnit XML 결과 형식의 테스트 결과가 Callback URL을 통해 Jenkins에 자동으로 전달됩니다. Jenkins는 반환 된 테스트 결과를 반영합니다.
@@ -331,18 +331,18 @@ Jenkins 대시 보드에서 "Webhook step" 플러그인을 검색하여 설치�
 자세한 테스트결과 분석 정보는 [apptest.ai] (https://apptest.ai)를 방문해 확인하실 수 있습니다.
 
 - Jenkins에서 테스트 결과보기
-    {{< figure src="/images/1_jenkins_9.png" >}}
-    {{< figure src="/images/1_jenkins_10.png" >}}
-    {{< figure src="/images/1_jenkins_11.png" >}}
-    {{< figure src="/images/1_jenkins_12.png" >}}
-    {{< figure src="/images/1_jenkins_13.png" >}}
-    {{< figure src="/images/1_jenkins_14.png" >}}
+    {{< figure src="../../images/1_jenkins_9.png" >}}
+    {{< figure src="../../images/1_jenkins_10.png" >}}
+    {{< figure src="../../images/1_jenkins_11.png" >}}
+    {{< figure src="../../images/1_jenkins_12.png" >}}
+    {{< figure src="../../images/1_jenkins_13.png" >}}
+    {{< figure src="../../images/1_jenkins_14.png" >}}
 
 - apptest.ai 에서 테스트 결과보기
-    {{< figure src="/images/1_jenkins_15.png" >}}
-    {{< figure src="/images/1_jenkins_16.png" >}}
-    {{< figure src="/images/1_jenkins_17.png" >}}
-    {{< figure src="/images/1_jenkins_18.png" >}}
+    {{< figure src="../../images/1_jenkins_15.png" >}}
+    {{< figure src="../../images/1_jenkins_16.png" >}}
+    {{< figure src="../../images/1_jenkins_17.png" >}}
+    {{< figure src="../../images/1_jenkins_18.png" >}}
 
 
 

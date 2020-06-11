@@ -14,15 +14,15 @@ CircleCI에서 빌드하는 동안 apptest.ai 서비스를 활성화하려면 : 
 
 #### Adding apptest.ai access key onto the build environment
 1. apptest.ai 서비스의 Profile 페이지에서 액세스 키 문자열을 복사하십시오.
-   {{< figure src="/images/3_circleci_1.gif" >}}
+   {{< figure src="../../images/3_circleci_1.gif" >}}
 
 
 2. CircleCI에 연결하고 빌드 프로젝트 이름 오른쪽의 설정 아이콘을 클릭하여 빌드 구성 페이지로 이동하십시오.
-   {{< figure src="/images/3_circleci_2.png" >}}
+   {{< figure src="../../images/3_circleci_2.png" >}}
 
 
 3. 설정 페이지에서 환경 변수 메뉴를 선택하고 변수 추가 단추를 클릭하여 APPTEST_AI_ACCESS_KEY 변수를 작성하십시오.
-   {{< figure src="/images/3_circleci_3.png" >}}
+   {{< figure src="../../images/3_circleci_3.png" >}}
 
 
    변수 값을 "apptest.ai ID : apptest.ai 액세스 키"로 입력하십시오. 예를 들어 ID가 jean@apptest.ai이고 액세스 키가 "ab8f3e321d631c84c9b1113"인 경우입니다. 다음과 같이 등록하십시오.
@@ -61,13 +61,13 @@ CircleCI에서 빌드하는 동안 apptest.ai 서비스를 활성화하려면 : 
    ```
 
    > 서비스를 호출하려면 최소한 2 개의 arguments, binary_path 및 project_id가 필요합니다. binary_path는 테스트하려는 바이너리의 경로입니다. * Android의 경우 .apk 파일 및 iOS의 경우 * .ipa 파일입니다. project_id는 테스트 시간 및 테스트 할 장치 목록과 같은 설정이 포함 된 apptest.ai의 프로젝트 고유번호 (Project ID)입니다. apptest.ai의 프로젝트 ID는 아래와 같이 프로젝트 정보 페이지에서 찾을 수 있습니다.
-   {{< figure src="/images/3_circleci_4.png" >}}
+   {{< figure src="../../images/3_circleci_4.png" >}}
 
 
 3. Execute the build
 
    apptest-ai/run-test 단계는 apptest.ai로 테스트 요청을 보내고 테스트가 완료된 후 테스트 결과를 아래 그림과 같이 콘솔에 인쇄합니다.
-   {{< figure src="/images/3_circleci_5.png" >}}
+   {{< figure src="../../images/3_circleci_5.png" >}}
 
 
    > apptest.ai 테스트 결과를 기다리지 않고 다음 빌드 단계로 넘어가려면 아래와 같이 waiting_for_test_results 인수를 FALSE로 설정하면 됩니다.
@@ -89,7 +89,7 @@ CircleCI에서 빌드하는 동안 apptest.ai 서비스를 활성화하려면 : 
    ```
 
    Store-test 결과 단계를 추가하면 CircleCI는 아래와 같이 Test Summary 탭에 apptest.ai 테스트 결과와 다른 테스트 결과를 분석합니다.
-   {{< figure src="/images/3_circleci_6.png" >}}
+   {{< figure src="../../images/3_circleci_6.png" >}}
 
 
 1. (Optional) Storing test result
@@ -102,11 +102,11 @@ CircleCI에서 빌드하는 동안 apptest.ai 서비스를 활성화하려면 : 
    ```
 
    저장된 테스트 보고서는 CircleCI의 아티팩트 탭에서 아래와 같이 조회됩니다.
-   {{< figure src="/images/3_circleci_7.png" >}}
+   {{< figure src="../../images/3_circleci_7.png" >}}
 
 
    이 html 파일을 클릭하면 아래와 같은 상세 보고서를 볼 수 있으며,이 html 파일을 클릭하면 아래와 같은 상세 보고서를 볼 수 있습니다.
-   {{< figure src="/images/3_circleci_8.png" >}}
+   {{< figure src="../../images/3_circleci_8.png" >}}
 
 
 

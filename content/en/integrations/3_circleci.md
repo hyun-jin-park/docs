@@ -15,15 +15,15 @@ To enable the apptest.ai service during a build in CircleCI: 1. Register the app
 
 ### Adding apptest.ai access key onto the build environment
 1. Copy the access key string from the apptest.ai service profile page
-   {{< figure src="/images/3_circleci_1.gif" >}}
+   {{< figure src="../../images/3_circleci_1.gif" >}}
 
 
 2. Connect to CircleCI and click the Setting icon to the right of the build project name to go to the build configuration page.
-   {{< figure src="/images/3_circleci_2.png" >}}
+   {{< figure src="../../images/3_circleci_2.png" >}}
 
 
 3. From the Setup page, select Environment variables menu and click Add Variables button to create the variable APPTEST_AI_ACCESS_KEY.
-   {{< figure src="/images/3_circleci_3.png" >}}
+   {{< figure src="../../images/3_circleci_3.png" >}}
 
 
    Enter the value of the variable as “apptest.ai ID: apptest.ai Access Key”. For example, if the ID is jean@apptest.ai and the access key is “ab8f3e321d631c84c9b1113”. Register one as follows.
@@ -62,13 +62,13 @@ To enable the apptest.ai service during a build in CircleCI: 1. Register the app
    ```
 
    > At least two arguments, binary_path and project_id, are required to invoke the service. binary_path is the path to the binary you want to test: * .apk files for android and * .ipa files for iOS. project_id is the ID for apptest.ai that contains the settings such as test time and device list for testing. The Project ID of apptest.ai can be found on the Project Information page as shown below.
-   {{< figure src="/images/3_circleci_4.png" >}}
+   {{< figure src="../../images/3_circleci_4.png" >}}
 
 
 3. Execute the build
 
    The apptest-ai/run-test step sends a request to test with apptest.ai and after the test is complete, prints the test result to the console as shown below.
-   {{< figure src="/images/3_circleci_5.png" >}}
+   {{< figure src="../../images/3_circleci_5.png" >}}
 
 
    > If you want to move on to the next build step without waiting for the apptest.ai test result, you can set FALSE to the waiting_for_test_results argument as shown below.
@@ -90,7 +90,7 @@ To enable the apptest.ai service during a build in CircleCI: 1. Register the app
    ```
 
    If you add the store-test result step, CircleCI analyzes the test result of apptest.ai along with other test results in the Test Summary tab as below.
-   {{< figure src="/images/3_circleci_6.png" >}}
+   {{< figure src="../../images/3_circleci_6.png" >}}
 
 
 5. (Optional) Storing test result
@@ -103,11 +103,11 @@ To enable the apptest.ai service during a build in CircleCI: 1. Register the app
    ```
 
    Saved test report is inquired as below in Artifacts tab in CircleCI.
-   {{< figure src="/images/3_circleci_7.png" >}}
+   {{< figure src="../../images/3_circleci_7.png" >}}
 
 
    If you click this html file, you can see the detailed report as below.
-   {{< figure src="/images/3_circleci_8.png" >}}
+   {{< figure src="../../images/3_circleci_8.png" >}}
 
 
 

@@ -122,7 +122,7 @@ Please refer to the Example Link for more detail.
     {{< figure src="../../images/1_jenkins_6.png" >}}
 
 - On the pipeline definition page, add the apptest.ai Test Stage Code to the Script box
-    {{< figure src="/images/1_jenkins_7.png" >}}
+    {{< figure src="../../images/1_jenkins_7.png" >}}
 
     ##### [apptest.ai Test Stage Code 1] – Webhook
     ```
@@ -322,7 +322,7 @@ Please refer to the Example Link for more detail.
     - apkFile: The app path (App Binary File) to be tested
 
     Click “Build Now” in Jenkins to start the pipeline.
-    {{< figure src="/images/1_jenkins_8.png" >}}
+    {{< figure src="../../images/1_jenkins_8.png" >}}
 
 ### 5. Test Results
 Once the testing is complete, the testing results in the JUnit XML result format are automatically passed onto Jenkins with a callback URL. 
@@ -330,15 +330,15 @@ Once the testing is complete, the testing results in the JUnit XML result format
 Jenkins reflects the returned testing results. For more detailed analysis, please visit [apptest.ai](https://apptest.ai)
 
 - View Testing Results in Jenkins
-    {{< figure src="/images/1_jenkins_9.png" >}}
-    {{< figure src="/images/1_jenkins_10.png" >}}
-    {{< figure src="/images/1_jenkins_11.png" >}}
-    {{< figure src="/images/1_jenkins_12.png" >}}
-    {{< figure src="/images/1_jenkins_13.png" >}}
-    {{< figure src="/images/1_jenkins_14.png" >}}
+    {{< figure src="../../images/1_jenkins_9.png" >}}
+    {{< figure src="../../images/1_jenkins_10.png" >}}
+    {{< figure src="../../images/1_jenkins_11.png" >}}
+    {{< figure src="../../images/1_jenkins_12.png" >}}
+    {{< figure src="../../images/1_jenkins_13.png" >}}
+    {{< figure src="../../images/1_jenkins_14.png" >}}
 
 - View Testing Results in apptest.ai
-    {{< figure src="/images/1_jenkins_15.png" >}}
-    {{< figure src="/images/1_jenkins_16.png" >}}
-    {{< figure src="/images/1_jenkins_17.png" >}}
-    {{< figure src="/images/1_jenkins_18.png" >}}
+    {{< figure src="../../images/1_jenkins_15.png" >}}
+    {{< figure src="../../images/1_jenkins_16.png" >}}
+    {{< figure src="../../images/1_jenkins_17.png" >}}
+    {{< figure src="../../images/1_jenkins_18.png" >}}

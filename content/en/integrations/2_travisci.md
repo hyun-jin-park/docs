@@ -16,7 +16,7 @@ To use the apptest.ai service within Travis CI pipeline, you can take the follow
 ### Adding apptest.ai access key onto the build environment
 
 - Copy the access key string from the apptest.ai service profile page
-{{< figure src="/images/2_travisci_1.gif" >}}
+{{< figure src="../../images/2_travisci_1.gif" >}}
 
 
 - Add apptest.ai access key to the build envirronment variable named APPTEST_AI_ACCESS_KEY and add the encryprion to the build script
@@ -51,18 +51,18 @@ To use the apptest.ai service within Travis CI pipeline, you can take the follow
 
   > At least two arguments, binary_path and project_id, are required to invoke the service. binary_path is the path to the binary you want to test, i.e. * .apk files for android and * .ipa files for iOS. project_id is the Project ID for apptest.ai that contains the settings such as test time and device list for testing. The Project ID of apptest.ai can be found on the project information page as shown below.
   > 
-  {{< figure src="/images/2_travisci_2.png" >}}
+  {{< figure src="../../images/2_travisci_2.png" >}}
 
 
 
   If you don’t want to download apptest.ai’s CI integration script every time, include apptest.ai’s ci_addon repository in the Project Repository in advance.
 
 - Once you commit the build script, Travis CI will execute. When running apptest.ai script, the test is executed as shown below and the result is printed on the console.
-  {{< figure src="/images/2_travisci_3.png" >}}
+  {{< figure src="../../images/2_travisci_3.png" >}}
 
 
 - The test results are stored in test-results/apptest-ai_result.html with detailed HTML report and an XML document in JUnit Test result format in test-results/apptestai/result.xml. You can save this file externally using various deploy functions provided by Travis CI. Below is an example of a release on Github. You can see the apptest.ai test report posted on Github’s release page.
-  {{< figure src="/images/2_travisci_4.gif" >}}
+  {{< figure src="../../images/2_travisci_4.gif" >}}
 
 
   > If you want to change the location of the folder to store results, declare and pass test_result_path environment variable. If you want to execute the next build without waiting for the test to finish, declare waiting_for_test_results environment variable and pass FALSE.

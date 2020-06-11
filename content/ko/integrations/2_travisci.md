@@ -16,7 +16,7 @@ Travis CI 파이프 라인 내에서 apptest.ai 서비스를 사용하려면 다
 #### Adding apptest.ai access key onto the build environment
 
 - apptest.ai 서비스의 Profile 페이지에서 액세스 키 문자열을 복사하십시오.
-  {{< figure src="/images/2_travisci_1.gif" >}}
+  {{< figure src="../../images/2_travisci_1.gif" >}}
 
 
 - APPTEST_AI_ACCESS_KEY라는 빌드 환경 변수에 apptest.ai 액세스 키를 추가하고 빌드 스크립트에 암호화를 추가하십시오.
@@ -51,18 +51,18 @@ Travis CI 파이프 라인 내에서 apptest.ai 서비스를 사용하려면 다
 
   > 서비스를 호출하려면 최소한 2 개의 arguments, binary_path 및 project_id가 필요합니다. binary_path는 테스트하려는 바이너리 파일의 경로입니다 (예 : Android 용 * .apk 파일 및 iOS 용 * .ipa 파일). project_id는 테스트 시간 및 테스트를 위한 장치 목록과 같은 설정을 포함하는 apptest.ai의 프로젝트 고유번호(Project ID)입니다. apptest.ai의 프로젝트 ID는 아래와 같이 프로젝트 정보 페이지에서 찾을 수 있습니다.
   
-  {{< figure src="/images/2_travisci_2.png" >}}
+  {{< figure src="../../images/2_travisci_2.png" >}}
 
 
 
   apptest.ai의 CI 통합 스크립트를 매번 다운로드하지 않으려면 프로젝트 저장소에 apptest.ai의 ci_addon 저장소를 미리 포함하십시오.
 
 - 빌드 스크립트를 커밋하면 Travis CI가 실행됩니다. apptest.ai 스크립트를 실행할 때 아래와 같이 테스트가 실행되고 결과가 콘솔에 인쇄됩니다.
-  {{< figure src="/images/2_travisci_3.png" >}}
+  {{< figure src="../../images/2_travisci_3.png" >}}
 
 
 - 테스트 결과는 자세한 HTML 형식의 보고서는 test-results/apptest-ai_result.html에 JUnit 테스트 결과 형식의 XML 문서는 test-results/apptestai/result.xml에 저장됩니다. Travis CI에서 제공하는 다양한 배포 기능을 사용하여이 파일을 외부에 저장할 수 있습니다. 아래는 Github의 릴리즈 예입니다. apptest.ai 테스트 보고서는 Github의 릴리스 페이지에 게시되어 있습니다.
-  {{< figure src="/images/2_travisci_4.gif" >}}
+  {{< figure src="../../images/2_travisci_4.gif" >}}
 
 
   > 결과를 저장할 폴더의 위치를 변경하려면 test_result_path 환경 변수를 선언하고 전달하십시오. 테스트가 완료되기를 기다리지 않고 다음 빌드를 실행하려면 waiting_for_test_results 환경 변수를 선언하고 FALSE를 전달하십시오.
