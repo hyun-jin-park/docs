@@ -90,12 +90,12 @@ Response
 To integrate apptest.ai into a Jenkins pipline, an access key and a project ID are required.
 
 - How to find the access key: An access key is automatically issued when you sign up with apptest.ai. You can locate it in the apptest.ai profile page
-    {{< figure src="./images/1_jenkins_1.png" >}}
-    {{< figure src="./images/1_jenkins_2.png" >}}
+    {{< figure src="../../images/1_jenkins_1.png" >}}
+    {{< figure src="../../images/1_jenkins_2.png" >}}
 
 - How to find the project ID: A project ID is assigned when you create a testing project
-    {{< figure src="./images/1_jenkins_3.png" >}}
-    {{< figure src="./images/1_jenkins_4.png" >}}
+    {{< figure src="../../images/1_jenkins_3.png" >}}
+    {{< figure src="../../images/1_jenkins_4.png" >}}
 
     By default, a Sample Test Project Page is created automatically once you sign in.
 
@@ -118,8 +118,8 @@ This section demonstraters how to connect an apptest.ai Test stage to a Jenkins 
 Please refer to the Example Link for more detail.
 
 - Go to the setup page and click on the Configure page.
-    {{< figure src="./images/1_jenkins_5.png" >}}
-    {{< figure src="./images/1_jenkins_6.png" >}}
+    {{< figure src="../../images/1_jenkins_5.png" >}}
+    {{< figure src="../../images/1_jenkins_6.png" >}}
 
 - On the pipeline definition page, add the apptest.ai Test Stage Code to the Script box
     {{< figure src="/images/1_jenkins_7.png" >}}
