@@ -1,4 +1,4 @@
 buttons:
-  - title: Run tests
-    action: "run_tests"
-    description: Run your tests
+  - title: Run Deploy
+    action: "run_deploy"
+    description: Deploy google cloud
