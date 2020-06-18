@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>apptest.ai – CI/CD Integration Document</title><link>/ko/integrations/</link><description>Recent content in CI/CD Integration Document on apptest.ai</description><generator>Hugo -- gohugo.io</generator><atom:link href="/ko/integrations/index.xml" rel="self" type="application/rss+xml"/><item><title>Integrations: 1. Jenkins</title><link>/ko/integrations/1_jenkins/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/integrations/1_jenkins/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>apptest.ai – CI/CD Integration Document</title><link>/apptest_client_docs/ko/integrations/</link><description>Recent content in CI/CD Integration Document on apptest.ai</description><generator>Hugo -- gohugo.io</generator><atom:link href="/apptest_client_docs/ko/integrations/index.xml" rel="self" type="application/rss+xml"/><item><title>Integrations: 1. Jenkins</title><link>/apptest_client_docs/ko/integrations/1_jenkins/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptest_client_docs/ko/integrations/1_jenkins/</guid><description>
 &lt;h2 id="jenkins-사용자를-위한-apptestai-통합-가이드">Jenkins 사용자를 위한 apptest.ai 통합 가이드&lt;/h2>
 &lt;h5 id="jenkins-파이프라인으로-android-및-ios-앱-테스트-자동화하기">Jenkins 파이프라인으로 Android 및 iOS 앱 테스트 자동화하기&lt;/h5>
 &lt;p>이 문서는 Jenkins를 구성하고 API를 사용하여 빌드 단계에서 apptest.ai 테스트를 자동으로 실행할 수 있도록 통합시키는 방법을 설명합니다.&lt;/p>
@@ -374,7 +374,7 @@ junit 'tmp/TESTS-*.xml'
 &lt;/figure>
 &lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Integrations: 2. Travis CI</title><link>/ko/integrations/2_travisci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/integrations/2_travisci/</guid><description>
+&lt;/ul></description></item><item><title>Integrations: 2. Travis CI</title><link>/apptest_client_docs/ko/integrations/2_travisci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptest_client_docs/ko/integrations/2_travisci/</guid><description>
 &lt;h2 id="apptestai-integration-for-travis-ci">apptest.ai Integration for Travis CI&lt;/h2>
 &lt;p>몇 줄의 스크립트만으로 apptest.ai를 Travis CI와 함께 사용하여 testbot에서 앱을 탐색하고 모든 빌드 프로세스에 대한 결과를보고 할 수 있습니다.&lt;/p>
 &lt;p>Travis CI 파이프 라인 내에서 apptest.ai 서비스를 사용하려면 다음 두 단계를 수행하십시오. 1. apptest.ai의 액세스 키를 등록하고 2. apptest.ai를 빌드 스크립트 (travis.yml)에 추가하십시오.&lt;/p>
@@ -436,7 +436,7 @@ global:
 &lt;p>iOS의 경우 iOS에는 등록 된 환경 변수가 두 개 더 필요합니다. 이것은 iOS에서 바이너리를 생성 할 때 필요한 Code sign을 위한 환경 변수입니다. 아래에서는 Code Sign에 Fastlane 매칭을 사용했습니다. Fastlane match는 Github에서 코드 서명에 필요한 인증서 파일과 프로비저닝 파일을 암호화하므로 인증서가 저장된 개인 GitHub 리포지토리에 액세스하기 위해 두 개의 액세스 토큰과 암호 해독 키가 추가됩니다.&lt;/p>
 &lt;script type="application/javascript" src="https://gist.github.com/genie-park/8c3756623d48b472e177bc473c5c9338.js">&lt;/script>
 &lt;/li>
-&lt;/ul></description></item><item><title>Integrations: 3. Circle CI</title><link>/ko/integrations/3_circleci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/integrations/3_circleci/</guid><description>
+&lt;/ul></description></item><item><title>Integrations: 3. Circle CI</title><link>/apptest_client_docs/ko/integrations/3_circleci/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptest_client_docs/ko/integrations/3_circleci/</guid><description>
 &lt;h2 id="apptestai-integration-for-circle-ci">apptest.ai Integration for Circle CI&lt;/h2>
 &lt;p>CircleCI 버전 2.1부터 orb라는 빌드 스크립트 공유 방법을 사용하게 됨으로써 단 몇 줄의 스크립트만으로 매 빌드마다 Testbot이 앱을 테스트한 결과를 보고받을 수 있습니다.&lt;/p>
 &lt;p>CircleCI에서 빌드하는 동안 apptest.ai 서비스를 활성화하려면 : 1. 빌드 환경 변수에 apptest.ai 액세스 키를 등록합니다.&lt;/p>
@@ -545,7 +545,7 @@ test_result_path: app/build/outputs/apk/debug
 &lt;p>iOS:&lt;/p>
 &lt;script type="application/javascript" src="https://gist.github.com/genie-park/078f9d25e81f75a2d61435c3684367f9.js">&lt;/script>
 &lt;/li>
-&lt;/ol></description></item><item><title>Integrations: 4. Circle CI with Saucelabs</title><link>/ko/integrations/4_circleciwithsaucelabs/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/ko/integrations/4_circleciwithsaucelabs/</guid><description>
+&lt;/ol></description></item><item><title>Integrations: 4. Circle CI with Saucelabs</title><link>/apptest_client_docs/ko/integrations/4_circleciwithsaucelabs/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>/apptest_client_docs/ko/integrations/4_circleciwithsaucelabs/</guid><description>
 &lt;h2 id="saucelabs에서-circle-ci와-apptestai-모두-사용하기">SauceLabs에서 Circle CI와 apptest.ai 모두 사용하기&lt;/h2>
 &lt;p>CircleCI에서 apptest.ai 서비스를 사용하여 스크립트를 작성없이 스모크 테스트(Smoke Test)를 Daily 빌드마다 수행하는 방법에 대한 튜토리얼이 있습니다. 이번에는 apptest.ai에서 제공하는 장치가 아니라 Sauce Labs에서 제공하는 장치를 사용하여 동일하게 테스트하는 방법을 소개합니다.&lt;/p>
 &lt;p>CircleCI가 appTest.ai 서비스를 사용하는 방식과 다른 점은 apptest.ai의 액세스 키 대신 Sauce Labs API 키를 사용하고 apptest.ai 및 Sauce Labs 계정을 연결하는 것입니다. 현재 베타서비스로 운영중이며, apptest.ai 및 Sauce Labs 계정을 연결하려면 [contact@apptest.ai] (mailto : &lt;a href="mailto:contact@apptest.ai">contact@apptest.ai&lt;/a>)로 연락주시기 바랍니다.&lt;/p>
