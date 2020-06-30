@@ -37,11 +37,11 @@ Request Body Miltipary Form Data #2
 |:--            |:--        |:--                |:--                    |:--             |:--|
 | pid           |           | Positive Number   | -                     | Unique number of Project <br/> ex) 509   | Required |
 | testset_name  |           | String            | Max 100 Characters    | Name of testset <br/> ex) "Testset name Example#1" | Required |
-| time_limmit   |           | Positive Number   | Min : 5 <br/>Max : 30 | Test time limit (Minutes) <br/>ex) 5 <br/>If the value is empty, it follows the time-limit saved in the project settings.     | Required |
+| time_limit   |           | Positive Number   | Min : 5 <br/>Max : 30 | Test time limit (Minutes) <br/>ex) 5 <br/>If the value is empty, it follows the time-limit saved in the project settings.     | Required |
 | use_vo        |           | Boolean           | Default: false        | Whether AT&T Video Optimizer(ARO) is used (`true` or `false` ) <br/>ex) true  | Required |
 | callback      |           | String            | Max 250 Characters    | Callback URL to be called after test completion. <br/>ex) 'https://127.0.0.1/callback/url/example'  | Required |
-| credentials   | login_id  | String            | Max 150 Characters    | Account information(ID) of the test target app to be used to test the app <br/>(Test credentials info - Login ID) <br/>ex) 'credentials_id'            | Required |
-|               | login_pw  | String            | Max 150 Characters    | Account information(Password) of the test target app to be used to test the app <br/>(Test credentials info - Login PW) <br/>ex) 'credentials_pw'      | Required 
+| credentials   | login_id  | String            | Max 150 Characters    | Account information(ID) of the test target app to be used to test the app <br/>(Test credentials info - Login ID) <br/>ex) 'test@gmail.com' or '01012345678' or 'testaccount'            | Required |
+|               | login_pw  | String            | Max 150 Characters    | Account information(Password) of the test target app to be used to test the app <br/>(Test credentials info - Login PW) <br/>ex) 'password1234!'      | Required 
 
 [ Request Example ]
 ```
@@ -54,8 +54,8 @@ curl    --request POST \
             "time_limit": 5, \
             "use_vo": false, \
             "credentials": { \
-                "login_id": "credentials_id", \
-                "login_pw": "credentials_pw" \
+                "login_id": "test@gmail.com", \
+                "login_pw": "password1234!" \
             } \
         }' https://api.apptest.ai/openapi/v2/testset
 ```
@@ -89,8 +89,8 @@ curl    --request POST \
 |:--            |:--                        |:--        |
 | 4000          | Missing Request Parameter | The required parameter was not found in the request parameters : {{ PARAMETER KEY }} |
 | 4030          | App File Analysis Failed  | iOS plistlib Parsing Error : {{ PARSING ERROR MSG }} |
-| 4031          |                           | Test creation failed : There was a problem pre-processing your app file. \n The IPA file must be a development version that is signed by your development certificate. |
-| 4032          |                           | Test creation failed. Invalid app file. \n There was a problem pre-processing your app file. |
+| 4031          |                           | Test creation failed : There was a problem pre-processing your app file. <br /> The IPA file must be a development version that is signed by your development certificate. |
+| 4032          |                           | Test creation failed. Invalid app file. <br /> There was a problem pre-processing your app file. |
 | 4040          |                           | Android Manifest Parsing Error : {{ PARSING ERROR MSG }} |
 | 4041          |                           | No launchable activity found. (android.intent.category.LAUNCHER) |
 | 4050          | Invalid Request Parameter | File extension not supported. ( Support : ipa, zip, app, apk, xapk, apks ) |
@@ -242,12 +242,13 @@ Response Body Data Type : JSON
 
 [ JUnit XML Format ]
 
-| Key	        | Type      | Description                                               |
-|:--            |:--        |:--                                                        |
-| complete      | Boolean   | Whether the test is running or completed (true | false)   |
-| result_xml    | String    | Result data in XML format in JUnit format                 |
-| result_html   | String    | Result data in HTML format                                |
-| result_json   | String    | Result data in JSON format in JUnit format
+| Key	        | Attributes    | Description                                               |
+|:--            |:--            |:--                                                        |
+| testsuite     | name          | apptest.ai's project name |
+| testcase      | name          | Name of the device under test (Unit Test) |
+|               | time          | Time the test was performed |
+| system-out    | -             | Test result link of apptest.ai |
+| error         | message       | Test results link where errors were found |
 
 
 [ JUnit XML Format Example ]
@@ -283,8 +284,8 @@ Response Body Data Type : JSON
 |:--    |:--                            |:--                                                        |
 | 4000	| Missing Request Parameter	    | The required parameter was not found in the request parameters : ({PARAMETER KEY}) |
 | 4030	| App File Analysis Failed	    | iOS plistlib Parsing Error : {PARSING ERROR MSG} |
-| 4031	| App File Analysis Failed	    | Test creation failed : There was a problem pre-processing your app file. \n the IPA file must be a development version that is signed by your development certificate. |
-| 4032	| App File Analysis Failed	    | Test creation failed : Invalid app file. \n There was a problem pre-processing your app file. |
+| 4031	| App File Analysis Failed	    | Test creation failed : There was a problem pre-processing your app file. <br /> the IPA file must be a development version that is signed by your development certificate. |
+| 4032	| App File Analysis Failed	    | Test creation failed : Invalid app file. <br /> There was a problem pre-processing your app file. |
 | 4040	| App File Analysis Failed	    | Android Manifest Parsing Error : {PARSING ERROR MSG} |
 | 4041	| App File Analysis Failed	    | No launchable activity found. (android.intent.category.LAUNCHER) |
 | 4050	| Invalid Request Parameter	    | File extension not supported. (support : ipa, zip, app, apk, xapk, apks) |
