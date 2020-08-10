@@ -3,6 +3,7 @@ title: "1. Jenkins"
 date: 2020-05-15
 weight: 4
 description: >
+
 #   A short lead descripton about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
 ---
 
@@ -16,27 +17,28 @@ Jenkins 설치에 대해서는 [Jenkins Setup Guide](https://jenkins.io/doc/pipe
 
 ### 1. Apptest.ai – Integration API
 
-<span style="background-color: #5cb85c;padding: 5px 10px;border-radius: 5px;color: #fff;margin-right: 10px;"> POST </span> 
+<span style="background-color: #5cb85c;padding: 5px 10px;border-radius: 5px;color: #fff;margin-right: 10px;"> POST </span>
 <span style="background-color: #f9f2f4;color: #c7254e;padding: 5px 10px;border-radius: 5px;">https://api.apptest.ai/tests_set/queuing?access_key={ACCESS_KEY}</span>
 
-JSON  Data parameters
+JSON Data parameters
 
-| Name	        | Type	            | Required / Optional   | Description                                                       |
-|:--            |:--                |:--                    |:--                                                                            |
-| callback	    | String	        | Optional	            | 테스트가 완료되면 호출될 Callback URL |
-| pid	        | Integer	        | Required	            | apptest.ai에서 생성한 프로젝트의 고유번호 |
-| test_set_name	| String	        | Required	            | apptest.ai의 프로젝트에 생성될 테스트 세트의 이름 |
-| login_id	    | String	        | Optional	            | Testbot이 로그인 화면을 만났을때 입력할 앱의 로그인 아이디 |
-| login_pw	    | String	        | Optional	            | Testbot이 로그인 화면을 만났을때 입력할 앱의 로그인 비밀번호 |
-| use_vo	    | Integer (0 or 1)	| Optional	            | AT&T사의  Video Optimizer (ARO)를 활성화 / 비활성화하는 옵션
+| Name          | Type             | Required / Optional | Description                                                  |
+| :------------ | :--------------- | :------------------ | :----------------------------------------------------------- |
+| callback      | String           | Optional            | 테스트가 완료되면 호출될 Callback URL                        |
+| pid           | Integer          | Required            | apptest.ai에서 생성한 프로젝트의 고유번호                    |
+| test_set_name | String           | Required            | apptest.ai의 프로젝트에 생성될 테스트 세트의 이름            |
+| login_id      | String           | Optional            | Testbot이 로그인 화면을 만났을때 입력할 앱의 로그인 아이디   |
+| login_pw      | String           | Optional            | Testbot이 로그인 화면을 만났을때 입력할 앱의 로그인 비밀번호 |
+| use_vo        | Integer (0 or 1) | Optional            | AT&T사의 Video Optimizer (ARO)를 활성화 / 비활성화하는 옵션  |
 
 File Parameters
 
-| Name	    | Type	| Required / Optional	| Description   |
-|:--        |:--    |:--                    |:--            |
-| apk_file	| File	| Required	            | 테스트 대상이 될 앱파일 
+| Name     | Type | Required / Optional | Description             |
+| :------- | :--- | :------------------ | :---------------------- |
+| apk_file | File | Required            | 테스트 대상이 될 앱파일 |
 
 Example Response
+
 ```
 {
   "data": {
@@ -67,8 +69,9 @@ Callback URL을 통해 리턴되는 JUnit XML 형식의 테스트 결과
 </testsuites>
 ```
 
-<span style="background-color: #5cb85c;padding: 5px 10px;border-radius: 5px;color: #fff;margin-right: 10px;"> GET </span> 
+<span style="background-color: #5cb85c;padding: 5px 10px;border-radius: 5px;color: #fff;margin-right: 10px;"> GET </span>
 <span style="background-color: #f9f2f4;color: #c7254e;padding: 5px 10px;border-radius: 5px;">https://api.apptest.ai/tests_set/{tsid}/ci_info?access_key=ACCESS_KEY</span>
+
 ```
 Response
 {
@@ -82,25 +85,21 @@ Response
 }
 ```
 
-
-
 ### 2. apptest.ai – Access Key and Project ID
 
-apptest.ai를 Jenkins 파이프 라인에 통합하려면 액세스 키와 프로젝트의 고유번호(Project ID)가 필요합니다. 
+apptest.ai를 Jenkins 파이프 라인에 통합하려면 액세스 키와 프로젝트의 고유번호(Project ID)가 필요합니다.
 
 - 액세스 키를 찾는 방법 : apptest.ai에 가입하면 액세스 키가 자동으로 발급됩니다. apptest.ai Profile 페이지에서 확인하실 수 있습니다.
-    {{< figure src="../../images/1_jenkins_1.png" >}}
-    {{< figure src="../../images/1_jenkins_2.png" >}}
+  {{< figure src="../../../images/1_jenkins_1.png" >}}
+  {{< figure src="../../../images/1_jenkins_2.png" >}}
 
 - 프로젝트 ID를 찾는 방법 : 테스트 프로젝트를 만들 때 프로젝트 ID가 할당됩니다.
-    {{< figure src="../../images/1_jenkins_3.png" >}}
-    {{< figure src="../../images/1_jenkins_4.png" >}}
+  {{< figure src="../../../images/1_jenkins_3.png" >}}
+  {{< figure src="../../../images/1_jenkins_4.png" >}}
 
-    회원가입시 기본적으로 샘플 테스트 프로젝트가 1개 생성됩니다.
+  회원가입시 기본적으로 샘플 테스트 프로젝트가 1개 생성됩니다.
 
-    샘플 테스트 프로젝트의 설정 변경은 지원되지 않습니다. 그러나 새로 생성한 프로젝트는 설정을 변경할 수 있습니다.
-
-
+  샘플 테스트 프로젝트의 설정 변경은 지원되지 않습니다. 그러나 새로 생성한 프로젝트는 설정을 변경할 수 있습니다.
 
 ### 3. Jenkins – Webhook Step Plugin Installation
 
@@ -108,64 +107,63 @@ Jenkins 대시 보드에서 "Webhook step" 플러그인을 검색하여 설치�
 
 다음 단계에서 webhook 대신 폴링을 사용하는 apptest.ai Test Stage Code2 소스 코드를 사용하는 경우이 단계를 건너 뛰십시오.
 
-
-
 ### 4. Jenkins – Pipeline configuration
 
 이 섹션에서는 apptest.ai Test 스테이지를 Jenkins 파이프 라인 항목에 연결하는 방법을 보여줍니다. Jenkins 파이프 라인 항목이 이미 작성되어 있어야합니다.
 
 자세한 내용은 예제 링크를 참조하십시오.
 
-
 - 메인 페이지에서 좌측메뉴의 Configure 버튼을 클릭하십시오.
-    {{< figure src="../../images/1_jenkins_5.png" >}}
-    {{< figure src="../../images/1_jenkins_6.png" >}}
+  {{< figure src="../../../images/1_jenkins_5.png" >}}
+  {{< figure src="../../../images/1_jenkins_6.png" >}}
 
 - 파이프 라인 설정 페이지에서 apptest.ai Tes Stage Code를 스크립트 입력란에 추가하십시오.
-    {{< figure src="../../images/1_jenkins_7.png" >}}
+  {{< figure src="../../../images/1_jenkins_7.png" >}}
 
-    ##### [apptest.ai Test Stage Code 1] – Webhook
-    ```
-    import groovy.json.JsonSlurper
-    node {
-        def gitRepository
-        def androidHome
-        def apkFile
-        def accessKey
-        def serviceProjectId
-        def asyncResult
-        def serviceUrl
-        def serviceHost
-        def serviceCompleteCheckUrl
+  ##### [apptest.ai Test Stage Code 1] – Webhook
 
-        // Add to your Preparation Stage 
-        stage('Preparation') {
+  ```
+  import groovy.json.JsonSlurper
+  node {
+      def gitRepository
+      def androidHome
+      def apkFile
+      def accessKey
+      def serviceProjectId
+      def asyncResult
+      def serviceUrl
+      def serviceHost
+      def serviceCompleteCheckUrl
 
-            // Git Repository URL Address
-            gitRepository = 'https://github.com/forcemax/apps-android-wikipedia.git'
-            // Android Home Path
-            androidHome = '/opt/apps/android-sdk'
+      // Add to your Preparation Stage
+      stage('Preparation') {
 
-            echo "Current workspace : ${workspace}"
-            accessKey = 'e40c4487b3cf5e6d53ef0543d2614488'
-            serviceProjectId = 376
-            serviceHost = "https://api.apptest.ai"
-            serviceUrl = "${serviceHost}/test_set/queuing?access_key=${accessKey}"
+          // Git Repository URL Address
+          gitRepository = 'https://github.com/forcemax/apps-android-wikipedia.git'
+          // Android Home Path
+          androidHome = '/opt/apps/android-sdk'
 
-        }
+          echo "Current workspace : ${workspace}"
+          accessKey = 'e40c4487b3cf5e6d53ef0543d2614488'
+          serviceProjectId = 376
+          serviceHost = "https://api.apptest.ai"
+          serviceUrl = "${serviceHost}/test_set/queuing?access_key=${accessKey}"
 
-        // Git Source Clone Stage
-        stage('Clone source') {
-            git branch: 'master', url: gitRepository
-        }
-        // Android SDK directory path Setting
-        stage('SDK Configure') {
-            sh "echo 'sdk.dir=${androidHome}' > local.properties"
-        }
-        // Gradle AssembleDebug Build Stage
-        stage('Gradle Debug build') {
-            sh "./gradlew :app:assembleDebug"
-        }
+      }
+
+      // Git Source Clone Stage
+      stage('Clone source') {
+          git branch: 'master', url: gitRepository
+      }
+      // Android SDK directory path Setting
+      stage('SDK Configure') {
+          sh "echo 'sdk.dir=${androidHome}' > local.properties"
+      }
+      // Gradle AssembleDebug Build Stage
+      stage('Gradle Debug build') {
+          sh "./gradlew :app:assembleDebug"
+      }
+  ```
 
 
         // apptest.ai Test Stage
@@ -228,7 +226,7 @@ Jenkins 대시 보드에서 "Webhook step" 플러그인을 검색하여 설치�
         def serviceHost
         def serviceCompleteCheckUrl
 
-        // Add to your Preparation Stage 
+        // Add to your Preparation Stage
         stage('Preparation') {
 
             // Git Repository URL Address
@@ -323,29 +321,24 @@ Jenkins 대시 보드에서 "Webhook step" 플러그인을 검색하여 설치�
     - apkFile: 테스트 할 대상 앱파일(App Binary File)
 
     파이프 라인을 시작하려면 Jenkins에서 "Build Now"를 클릭하십시오.
-    {{< figure src="../../images/1_jenkins_8.png" >}}
+    {{< figure src="../../../images/1_jenkins_8.png" >}}
 
 ### 5. Test Results
+
 테스트가 완료되면 JUnit XML 결과 형식의 테스트 결과가 Callback URL을 통해 Jenkins에 자동으로 전달됩니다. Jenkins는 반환 된 테스트 결과를 반영합니다.
 
-자세한 테스트결과 분석 정보는 [apptest.ai] (https://apptest.ai)를 방문해 확인하실 수 있습니다.
+자세한 테스트결과 분석 정보는 [apptest.ai](https://apptest.ai)를 방문해 확인하실 수 있습니다.
 
 - Jenkins에서 테스트 결과보기
-    {{< figure src="../../images/1_jenkins_9.png" >}}
-    {{< figure src="../../images/1_jenkins_10.png" >}}
-    {{< figure src="../../images/1_jenkins_11.png" >}}
-    {{< figure src="../../images/1_jenkins_12.png" >}}
-    {{< figure src="../../images/1_jenkins_13.png" >}}
-    {{< figure src="../../images/1_jenkins_14.png" >}}
+  {{< figure src="../../../images/1_jenkins_9.png" >}}
+  {{< figure src="../../../images/1_jenkins_10.png" >}}
+  {{< figure src="../../../images/1_jenkins_11.png" >}}
+  {{< figure src="../../../images/1_jenkins_12.png" >}}
+  {{< figure src="../../../images/1_jenkins_13.png" >}}
+  {{< figure src="../../../images/1_jenkins_14.png" >}}
 
 - apptest.ai 에서 테스트 결과보기
-    {{< figure src="../../images/1_jenkins_15.png" >}}
-    {{< figure src="../../images/1_jenkins_16.png" >}}
-    {{< figure src="../../images/1_jenkins_17.png" >}}
-    {{< figure src="../../images/1_jenkins_18.png" >}}
-
-
-
-
-
-
+  {{< figure src="../../../images/1_jenkins_15.png" >}}
+  {{< figure src="../../../images/1_jenkins_16.png" >}}
+  {{< figure src="../../../images/1_jenkins_17.png" >}}
+  {{< figure src="../../../images/1_jenkins_18.png" >}}
