@@ -1,4 +1,34 @@
-# Docsy Example
+# Action Panel Install Guide
+
+```
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  repository_dispatch:
+    types: [run_deploy]
+name: Run Deploy
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    name: Run your tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "I just ran all your tests!"
+
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "./*"
+          target: ${{ secrets.REMOTE_TARGET }}
+```
 
 [Docsy](https://github.com/google/docsy) is a Hugo theme for technical documentation sites, providing easy site navigation, structure, and more. This **Docsy Example Project** uses the Docsy theme, as well as providing a skeleton documentation structure for you to use. You can either copy this project and edit it with your own content, or use the theme in your projects like any other [Hugo theme](https://gohugo.io/themes/installing-and-using-themes/).
 
